@@ -1,0 +1,10 @@
+ cat inputData/tippercent_weekly inputData/weather_weekly\
+  |python weatherJoin/map.py \
+  |sort|\
+  python weatherJoin/reduce.py \
+  > tipweather_weekly
+
+   cat sampleData/daily_count_1312 sampleData/weather_daily.txt \
+  |python weatherJoin/map.py \
+  |sort|
+  > weatherJoinOutput.txt
